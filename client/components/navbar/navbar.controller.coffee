@@ -3,8 +3,10 @@
 angular.module 'blogApp'
 .controller 'NavbarCtrl', ($scope, $location, Auth) ->
   $scope.menu = [
-    title: 'Home'
-    link: '/'
+    {title: 'Home',
+    link: '/'},
+    {title: 'Bio',
+    link: '/bio'}
   ]
   $scope.isCollapsed = true
   $scope.isLoggedIn = Auth.isLoggedIn
